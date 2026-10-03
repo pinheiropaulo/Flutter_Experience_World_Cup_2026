@@ -72,9 +72,13 @@ final class AppTextStyles._() {
     color: AppColors.ink,
   );
 
-  static TextStyle get paragraph => body.copyWith(height: 1.3);
+  static TextStyle get paragraph => body.copyWith(
+    height: 1.3,
+  );
 
-  static TextStyle get input => body.copyWith(height: 1.5);
+  static TextStyle get input => body.copyWith(
+    height: 1.5,
+  );
 
   static TextStyle get caption => GoogleFonts.dmSans(
     fontSize: 10,
@@ -82,7 +86,9 @@ final class AppTextStyles._() {
     height: 1,
     color: AppColors.ink,
   );
-  static TextStyle get overline => caption.copyWith(letterSpacing: 2);
+  static TextStyle get overline => caption.copyWith(
+    letterSpacing: 2,
+  );
 
   static TextStyle get mono => GoogleFonts.dmSans(
     fontSize: 12,

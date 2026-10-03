@@ -4,9 +4,7 @@ final class AppDimens._() {
   static const designWidth = 390.0;
 
   static const gridMargin = 20.0;
-
   static const gridGutter = 8.0;
-
   static const gridColumns = 4;
 
   static const paddingHorizontal = gridMargin;

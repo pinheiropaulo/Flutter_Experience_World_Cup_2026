@@ -36,7 +36,9 @@ final class AppTheme._() {
     disabledForegroundColor: AppColors.grayText,
     textStyle: AppTextStyles.button,
     minimumSize: Size(64, height),
-    padding: const EdgeInsets.symmetric(horizontal: 24),
+    padding: const EdgeInsets.symmetric(
+      horizontal: 24,
+    ),
 
     shape: const StadiumBorder(),
     side: side,
@@ -61,39 +63,56 @@ final class AppTheme._() {
   static final secondaryButton = _buttonStyle(
     background: AppColors.white,
     foreground: AppColors.ink,
-    side: const BorderSide(color: AppColors.borderStrong, width: 1.5),
+    side: const BorderSide(
+      color: AppColors.borderStrong,
+      width: 1.5,
+    ),
   );
 
   static final dangerOutlineButton = _buttonStyle(
     background: AppColors.white,
     foreground: AppColors.red,
-    side: BorderSide(color: AppColors.red.withValues(alpha: .45), width: 1.5),
+    side: BorderSide(
+      color: AppColors.red.withValues(alpha: .45),
+      width: 1.5,
+    ),
   );
 
   static final ghostButton = _buttonStyle(
     background: AppColors.white.withValues(alpha: .15),
     foreground: AppColors.white,
-    side: BorderSide(color: AppColors.white.withValues(alpha: .4), width: 1.5),
+    side: BorderSide(
+      color: AppColors.white.withValues(alpha: .4),
+      width: 1.5,
+    ),
     height: 44,
   );
 
   static final dangerGhostButton = _buttonStyle(
     background: AppColors.red.withValues(alpha: .2),
     foreground: AppColors.white,
-    side: BorderSide(color: AppColors.red.withValues(alpha: .6), width: 1.5),
+    side: BorderSide(
+      color: AppColors.red.withValues(alpha: .6),
+      width: 1.5,
+    ),
     height: 44,
   );
 
   static OutlineInputBorder inputBorder(Color color, double width) =>
       OutlineInputBorder(
         borderRadius: AppDimens.borderRadiusSm,
-        borderSide: BorderSide(color: color, width: width),
+        borderSide: BorderSide(
+          color: color,
+          width: width,
+        ),
       );
 
   static const _searchFill = Color(0xFFF5F5F0);
 
   static const _searchBorder = OutlineInputBorder(
-    borderRadius: BorderRadius.all(Radius.circular(12)),
+    borderRadius: BorderRadius.all(
+      Radius.circular(12),
+    ),
     borderSide: BorderSide.none,
   );
 
@@ -104,7 +123,11 @@ final class AppTheme._() {
       fontSize: 12,
       color: AppColors.grayText,
     ),
-    prefixIcon: const Icon(Icons.search, size: 18, color: AppColors.grayText),
+    prefixIcon: const Icon(
+      Icons.search,
+      size: 18,
+      color: AppColors.grayText,
+    ),
 
     border: _searchBorder,
     enabledBorder: _searchBorder,
@@ -116,7 +139,10 @@ final class AppTheme._() {
     scaffoldBackgroundColor: AppColors.cream,
     textTheme: AppTextStyles.textTheme,
 
-    filledButtonTheme: FilledButtonThemeData(style: primaryButton),
+    filledButtonTheme: FilledButtonThemeData(
+      style: primaryButton,
+    ),
+
     inputDecorationTheme: InputDecorationThemeData(
       filled: true,
       fillColor: AppColors.white,
@@ -125,18 +151,39 @@ final class AppTheme._() {
         horizontal: 16,
         vertical: 13.5,
       ),
-      hintStyle: AppTextStyles.body.copyWith(color: AppColors.grayText),
+
+      hintStyle: AppTextStyles.body.copyWith(
+        color: AppColors.grayText,
+      ),
+
       errorStyle: AppTextStyles.body.copyWith(
         fontSize: 10,
         color: AppColors.red,
       ),
-      border: inputBorder(AppColors.border, 1.5),
-      enabledBorder: inputBorder(AppColors.border, 1.5),
-      disabledBorder: inputBorder(AppColors.border, 1.5),
-
-      focusedBorder: inputBorder(AppColors.green, 2),
-      errorBorder: inputBorder(AppColors.red, 2),
-      focusedErrorBorder: inputBorder(AppColors.red, 2),
+      border: inputBorder(
+        AppColors.border,
+        1.5,
+      ),
+      enabledBorder: inputBorder(
+        AppColors.border,
+        1.5,
+      ),
+      disabledBorder: inputBorder(
+        AppColors.border,
+        1.5,
+      ),
+      focusedBorder: inputBorder(
+        AppColors.green,
+        2,
+      ),
+      errorBorder: inputBorder(
+        AppColors.red,
+        2,
+      ),
+      focusedErrorBorder: inputBorder(
+        AppColors.red,
+        2,
+      ),
     ),
 
     checkboxTheme: CheckboxThemeData(
@@ -145,28 +192,40 @@ final class AppTheme._() {
             ? AppColors.red
             : Colors.transparent,
       ),
-      checkColor: const WidgetStatePropertyAll(AppColors.white),
-      side: const BorderSide(color: AppColors.borderStrong, width: 1.5),
+      checkColor: const WidgetStatePropertyAll(
+        AppColors.white,
+      ),
+      side: const BorderSide(
+        color: AppColors.borderStrong,
+        width: 1.5,
+      ),
 
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(4)),
       ),
 
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
+
+      visualDensity: const VisualDensity(
+        horizontal: -4,
+        vertical: -4,
+      ),
     ),
 
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       trackGap: 0,
       stopIndicatorRadius: 0,
     ),
+
     cardTheme: const CardThemeData(
       color: AppColors.white,
       elevation: 0,
       surfaceTintColor: Colors.transparent,
       shadowColor: Colors.transparent,
       margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(borderRadius: AppDimens.borderRadiusMd),
+      shape: RoundedRectangleBorder(
+        borderRadius: AppDimens.borderRadiusMd,
+      ),
     ),
 
     navigationBarTheme: NavigationBarThemeData(
@@ -184,6 +243,7 @@ final class AppTheme._() {
               : AppColors.grayText,
         ),
       ),
+
       iconTheme: WidgetStateProperty.resolveWith(
         (states) => IconThemeData(
           size: 22,
